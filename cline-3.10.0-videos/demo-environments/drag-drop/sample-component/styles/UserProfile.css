@@ -1,0 +1,196 @@
+/* 
+   UserProfile component styles
+   This CSS file contains several issues that could be improved:
+   - Inconsistent naming conventions
+   - Redundant styles
+   - Non-responsive design
+   - Hardcoded colors instead of variables
+   - Overly specific selectors
+*/
+
+/* Main container */
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+
+/* Avatar styles */
+.user-profile-avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.user-profile-avatar img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3498db;
+}
+
+/* Content area */
+.user-profile-content {
+  flex: 1;
+}
+
+/* Profile info */
+.user-profile-info {
+  margin-bottom: 20px;
+}
+
+.user-profile-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+}
+
+.user-profile-email {
+  font-size: 16px;
+  color: #7f8c8d;
+  margin: 0 0 10px 0;
+}
+
+.user-profile-bio {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 20px 0;
+  color: #34495e;
+}
+
+/* Form styles */
+.user-profile-form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* Button styles */
+.user-profile-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-primary:hover {
+  background-color: #2980b9;
+}
+
+.btn-secondary {
+  background-color: #95a5a6;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-secondary:hover {
+  background-color: #7f8c8d;
+}
+
+/* Stats section */
+.user-profile-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ecf0f1;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+/* Loading and error states */
+.user-profile-loading,
+.user-profile-error {
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.user-profile-error {
+  color: #e74c3c;
+  border: 1px solid #e74c3c;
+}
+
+/* Non-responsive design - no media queries */
+/* This should be improved with responsive breakpoints */
+
+/* Duplicate selector with different properties */
+.user-profile {
+  margin: 0 auto;
+}
+
+/* Overly specific selector */
+body .container .content .user-profile .user-profile-content .user-profile-info .user-profile-name {
+  text-transform: uppercase;
+}
+
+/* !important usage that could be avoided */
+.user-profile-email {
+  font-style: italic !important;
+}
+
+/* Inconsistent naming convention */
+.UserProfileBio {
+  font-weight: 300;
+}

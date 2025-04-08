@@ -1,0 +1,259 @@
+{
+  "templateName": "Cline 3.10.0 Video Template",
+  "description": "Standard template for all Cline 3.10.0 feature videos",
+  "version": "1.0.0",
+  "sequenceSettings": {
+    "name": "Cline 3.10.0 Sequence",
+    "width": 1920,
+    "height": 1080,
+    "frameRate": 30,
+    "pixelAspectRatio": "Square Pixels (1.0)",
+    "timebase": 30,
+    "previewFormat": "YUV",
+    "audioSettings": {
+      "sampleRate": 48000,
+      "channels": "Stereo"
+    }
+  },
+  "bins": [
+    {
+      "name": "01_Sequences",
+      "items": ["Main Sequence"]
+    },
+    {
+      "name": "02_Video",
+      "items": ["Screen Recordings", "B-Roll", "Motion Graphics"]
+    },
+    {
+      "name": "03_Audio",
+      "items": ["Narration", "Music", "Sound Effects"]
+    },
+    {
+      "name": "04_Graphics",
+      "items": ["Lower Thirds", "Text Overlays", "Transitions", "Intro/Outro"]
+    },
+    {
+      "name": "05_Assets",
+      "items": ["Logos", "Icons", "Color Palettes"]
+    }
+  ],
+  "commonElements": {
+    "intro": {
+      "duration": "0:00:05:00",
+      "elements": [
+        {
+          "type": "animation",
+          "name": "Cline Logo Animation",
+          "path": "../assets/common/intro-outro/cline-logo-animation.mp4"
+        },
+        {
+          "type": "text",
+          "name": "Feature Title",
+          "style": "Title Style",
+          "position": "center",
+          "animation": "Fade In"
+        }
+      ]
+    },
+    "outro": {
+      "duration": "0:00:08:00",
+      "elements": [
+        {
+          "type": "text",
+          "name": "Call to Action",
+          "content": "Update to Cline 3.10.0 today!",
+          "style": "CTA Style",
+          "position": "center",
+          "animation": "Fade In"
+        },
+        {
+          "type": "animation",
+          "name": "Cline Logo Animation",
+          "path": "../assets/common/intro-outro/cline-logo-animation.mp4"
+        },
+        {
+          "type": "text",
+          "name": "Website",
+          "content": "docs.cline.bot",
+          "style": "Subtitle Style",
+          "position": "bottom-center",
+          "animation": "Fade In"
+        }
+      ]
+    }
+  },
+  "textStyles": [
+    {
+      "name": "Title Style",
+      "font": "Montserrat",
+      "fontSize": 60,
+      "fontWeight": "Bold",
+      "color": "#FFFFFF",
+      "alignment": "center",
+      "shadow": {
+        "enabled": true,
+        "opacity": 75,
+        "distance": 5,
+        "softness": 10
+      }
+    },
+    {
+      "name": "Subtitle Style",
+      "font": "Montserrat",
+      "fontSize": 36,
+      "fontWeight": "SemiBold",
+      "color": "#FFFFFF",
+      "alignment": "center",
+      "shadow": {
+        "enabled": true,
+        "opacity": 75,
+        "distance": 3,
+        "softness": 8
+      }
+    },
+    {
+      "name": "Body Style",
+      "font": "Roboto",
+      "fontSize": 24,
+      "fontWeight": "Regular",
+      "color": "#FFFFFF",
+      "alignment": "left",
+      "shadow": {
+        "enabled": true,
+        "opacity": 50,
+        "distance": 2,
+        "softness": 5
+      }
+    },
+    {
+      "name": "CTA Style",
+      "font": "Montserrat",
+      "fontSize": 48,
+      "fontWeight": "Bold",
+      "color": "#3498DB",
+      "alignment": "center",
+      "shadow": {
+        "enabled": true,
+        "opacity": 75,
+        "distance": 3,
+        "softness": 8
+      }
+    },
+    {
+      "name": "Code Style",
+      "font": "Source Code Pro",
+      "fontSize": 20,
+      "fontWeight": "Medium",
+      "color": "#E0E0E0",
+      "alignment": "left",
+      "background": {
+        "enabled": true,
+        "color": "#1E1E1E",
+        "opacity": 90,
+        "padding": 10,
+        "cornerRadius": 5
+      }
+    }
+  ],
+  "colorPalette": {
+    "primary": "#3498DB",
+    "secondary": "#2C3E50",
+    "accent": "#E74C3C",
+    "background": "#1A1A1A",
+    "text": "#FFFFFF",
+    "success": "#2ECC71",
+    "warning": "#F39C12",
+    "code": "#1E1E1E"
+  },
+  "transitions": [
+    {
+      "name": "Standard Dissolve",
+      "type": "Cross Dissolve",
+      "duration": "0:00:00:15"
+    },
+    {
+      "name": "Feature Transition",
+      "type": "Wipe",
+      "duration": "0:00:00:20",
+      "settings": {
+        "angle": 90,
+        "feather": 10
+      }
+    },
+    {
+      "name": "Section Transition",
+      "type": "Dip to Color",
+      "duration": "0:00:00:30",
+      "settings": {
+        "color": "#3498DB"
+      }
+    }
+  ],
+  "lowerThirds": [
+    {
+      "name": "Feature Name",
+      "duration": "0:00:04:00",
+      "animation": "Slide from Left",
+      "position": "bottom-left",
+      "textStyles": {
+        "title": "Title Style",
+        "subtitle": "Subtitle Style"
+      }
+    },
+    {
+      "name": "Key Point",
+      "duration": "0:00:03:00",
+      "animation": "Fade In",
+      "position": "bottom-center",
+      "textStyles": {
+        "title": "Subtitle Style"
+      }
+    }
+  ],
+  "audioSettings": {
+    "backgroundMusic": {
+      "volume": -18,
+      "fadeIn": "0:00:01:00",
+      "fadeOut": "0:00:02:00"
+    },
+    "narration": {
+      "volume": -3,
+      "compression": {
+        "threshold": -18,
+        "ratio": 4,
+        "attackTime": 5,
+        "releaseTime": 50
+      },
+      "eq": {
+        "highPass": 80,
+        "lowPass": 12000,
+        "presence": 3
+      }
+    },
+    "soundEffects": {
+      "volume": -10
+    }
+  },
+  "exportPresets": [
+    {
+      "name": "YouTube 1080p",
+      "format": "H.264",
+      "width": 1920,
+      "height": 1080,
+      "frameRate": 30,
+      "videoBitrate": 16,
+      "audioBitrate": 320,
+      "audioSampleRate": 48000
+    },
+    {
+      "name": "Twitter 720p",
+      "format": "H.264",
+      "width": 1280,
+      "height": 720,
+      "frameRate": 30,
+      "videoBitrate": 8,
+      "audioBitrate": 256,
+      "audioSampleRate": 48000
+    }
+  ]
+}

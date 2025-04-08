@@ -1,0 +1,161 @@
+/* 
+   This CSS file contains several issues that could be optimized:
+   - Duplicate selectors
+   - Unused styles
+   - Non-standard properties
+   - Inefficient selectors
+   - Inconsistent formatting
+*/
+
+/* Global styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styles */
+.header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Duplicate selector with different properties */
+.header {
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+/* Container with vendor prefixes that could be simplified */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Button styles with inconsistent formatting */
+.btn{
+background-color:#3498db;
+color:#fff;
+padding:10px 15px;
+border:none;
+border-radius:4px;
+cursor:pointer;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+/* Unused class */
+.unused-class {
+  font-weight: bold;
+  color: red;
+}
+
+/* Inefficient selector */
+div.container div.content div.section p.description {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Non-standard property */
+.card {
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Redundant properties */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #f8d7da;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/* Media queries with overlapping breakpoints */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding: 15px;
+  }
+}
+
+/* Colors that could be converted to variables */
+.primary-text {
+  color: #3498db;
+}
+
+.secondary-text {
+  color: #2c3e50;
+}
+
+.success-text {
+  color: #2ecc71;
+}
+
+.danger-text {
+  color: #e74c3c;
+}
+
+/* Overly specific selectors */
+body .container .sidebar ul.menu li a.active {
+  font-weight: bold;
+  color: #3498db;
+}
+
+/* !important usage that could be avoided */
+.hidden {
+  display: none !important;
+}
+
+/* Inconsistent units */
+.section {
+  margin-bottom: 30px;
+}
+
+.subsection {
+  margin-bottom: 1.5rem;
+}
+
+.paragraph {
+  margin-bottom: 15px;
+}
+
+.small-text {
+  font-size: 0.875em;
+}

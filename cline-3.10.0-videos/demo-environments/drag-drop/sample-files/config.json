@@ -1,0 +1,114 @@
+{
+  "appName": "SampleApp",
+  "version": "1.0.0",
+  "environment": "development",
+  "debug": true,
+  "server": {
+    "host": "localhost",
+    "port": 3000,
+    "timeout": 30000,
+    "ssl": false
+  },
+  "database": {
+    "host": "localhost",
+    "port": 5432,
+    "name": "sample_db",
+    "user": "admin",
+    "password": "password123",
+    "pool": {
+      "max": 20,
+      "min": 5,
+      "idle": 10000
+    }
+  },
+  "api": {
+    "baseUrl": "https://api.example.com",
+    "version": "v1",
+    "timeout": 5000,
+    "retry": {
+      "maxAttempts": 3,
+      "delay": 1000
+    },
+    "endpoints": {
+      "users": "/users",
+      "products": "/products",
+      "orders": "/orders"
+    },
+    "keys": {
+      "public": "pk_test_123456789",
+      "private": "sk_test_987654321"
+    }
+  },
+  "features": {
+    "authentication": true,
+    "authorization": true,
+    "caching": true,
+    "logging": true,
+    "notifications": false,
+    "realtime": false
+  },
+  "logging": {
+    "level": "debug",
+    "format": "json",
+    "output": ["console", "file"],
+    "file": {
+      "path": "/var/log/app.log",
+      "maxSize": "10m",
+      "maxFiles": 5
+    }
+  },
+  "cache": {
+    "enabled": true,
+    "type": "redis",
+    "host": "localhost",
+    "port": 6379,
+    "ttl": 3600
+  },
+  "email": {
+    "service": "sendgrid",
+    "apiKey": "SG.1234567890",
+    "from": "noreply@example.com",
+    "templates": {
+      "welcome": "d-123456789",
+      "passwordReset": "d-987654321",
+      "orderConfirmation": "d-567891234"
+    }
+  },
+  "storage": {
+    "type": "s3",
+    "region": "us-east-1",
+    "bucket": "sample-app-bucket",
+    "accessKey": "AKIAIOSFODNN7EXAMPLE",
+    "secretKey": "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY"
+  },
+  "ui": {
+    "theme": "light",
+    "colors": {
+      "primary": "#3498db",
+      "secondary": "#2c3e50",
+      "success": "#2ecc71",
+      "danger": "#e74c3c",
+      "warning": "#f39c12",
+      "info": "#3498db"
+    },
+    "fonts": {
+      "main": "Roboto",
+      "headings": "Montserrat",
+      "code": "Source Code Pro"
+    },
+    "animations": {
+      "enabled": true,
+      "duration": 300
+    }
+  },
+  "analytics": {
+    "enabled": true,
+    "provider": "google",
+    "trackingId": "UA-123456789-1"
+  },
+  "sentry": {
+    "dsn": "https://1234567890@sentry.io/1234567",
+    "environment": "development",
+    "tracesSampleRate": 0.2
+  }
+}

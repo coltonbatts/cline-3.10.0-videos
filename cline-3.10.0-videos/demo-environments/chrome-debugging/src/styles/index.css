@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Intentional CSS issue: conflicting styles */
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* This conflicts with the above style */
+.container {
+  padding: 10px;
+  max-width: 1000px;
+}
+
+/* Intentional CSS issue: z-index problem */
+.header {
+  position: relative;
+  z-index: 1;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+}
+
+.dropdown {
+  position: absolute;
+  z-index: 0; /* Should be higher than header */
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+/* Intentional CSS issue: overflow problem */
+.data-table {
+  width: 100%;
+  overflow-x: hidden; /* Should be 'auto' or 'scroll' */
+  border-collapse: collapse;
+}
+
+.data-table th, .data-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+/* Intentional CSS issue: media query with incorrect breakpoint */
+@media (max-width: 600px) {
+  .responsive-element {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* This conflicts with the above media query */
+@media (max-width: 600px) {
+  .responsive-element {
+    width: 50%;
+    display: inline-block;
+  }
+}
+
+/* Intentional CSS issue: incorrect flexbox properties */
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; /* Should be 'wrap' for responsive design */
+}
+
+.dashboard-card {
+  flex: 1 0 300px; /* Too wide for mobile */
+  margin: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Intentional CSS issue: button with poor contrast */
+.primary-button {
+  background-color: #336699; /* Poor contrast with white text */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Intentional CSS issue: animation performance problem */
+@keyframes slide {
+  from { transform: translateX(0); }
+  to { transform: translateX(100px); }
+}
+
+.animated-element {
+  animation: slide 0.5s infinite alternate;
+  width: 100px;
+  height: 100px;
+  background-color: #ff6b6b;
+}

@@ -1,0 +1,28 @@
+{
+  "dashboard": [
+    { "id": 1, "name": "Revenue", "stats": { "value": 12500 }, "trend_direction": "up" },
+    { "id": 2, "name": "Users", "stats": { "value": 8700 }, "trend_direction": "up" },
+    { "id": 3, "name": "Conversion", "stats": { "value": 2.4 }, "trend_direction": "down" },
+    { "id": 4, "name": "Bounce Rate", "stats": { "value": 42.1 }, "trend_direction": "up" },
+    { "id": 5, "name": "Session Duration", "stats": { "value": 3.5 }, "trend_direction": "down" }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "john@example.com",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "jane@example.com",
+      "role": "user"
+    }
+  ],
+  "settings": {
+    "theme": "light",
+    "notifications": true,
+    "language": "en"
+  }
+}
